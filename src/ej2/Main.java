@@ -10,7 +10,7 @@ public class Main {
 		Alumno a1 = new Alumno("Pep","222A",25);
 		Alumno a2 = new Alumno("Sam","222B",18);
 		Alumno a3 = new Alumno("Pep","222A",25);
-		Alumno a4 = new Alumno("Kal","224C",20);
+		Alumno a4 = new Alumno("Kal","222C",20);
 		
 		lista.add(a1);
 		lista.add(a2);

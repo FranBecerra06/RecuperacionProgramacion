@@ -20,24 +20,12 @@ public class Alumno {
 		return nombre;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
 	public String getNia() {
 		return nia;
 	}
 
-	public void setNia(String nia) {
-		this.nia = nia;
-	}
-
 	public int getEdad() {
 		return edad;
-	}
-
-	public void setEdad(int edad) {
-		this.edad = edad;
 	}
 
 	public boolean equals(Object objeto) {
@@ -54,17 +42,21 @@ public class Alumno {
 
 		}
 
-		Alumno other = (Alumno) objeto;
+		Alumno alumno = (Alumno) objeto;
 
-		return Objects.equals(nia, other.nia);
+		return 	Objects.equals(nombre, alumno.nombre) && 
+				Objects.equals(nia, alumno.nia)&& 
+				Objects.equals(edad, alumno.edad);
 
 	}
 
 	public int hashCode() {
 
-		return Objects.hash(nia);
+		return Objects.hash(nia, edad, nombre);
 
 	}
+
+	
 
 	public String toString() {
 		return "Alumno [nombre=" + nombre + ", nia=" + nia + ", edad=" + edad + "]";
