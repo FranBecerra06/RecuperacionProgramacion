@@ -53,7 +53,6 @@ public class Alumno {
 	public int hashCode() {
 
 		return Objects.hash(nia, edad, nombre);
-
 	}
 
 	
