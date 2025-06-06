@@ -23,7 +23,7 @@ public class Maps {
         }
         System.out.println();
 
-        // Creamos un TreeMap con un Comparator personalizado para ordenar:
+        // Creamos un TreeMap con un Comparator personalizado para ordenar
         // Primero, por el precio del producto
         // Segundo, por el nombre del producto en caso de que tengan el mismo precio
         TreeMap<String, Double> listaOrdenada = new TreeMap<>(new Comparator<String>() {
