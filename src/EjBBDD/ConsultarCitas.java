@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 
 public class ConsultarCitas {
 
-	public static void consultarCitasDesde(Connection conn, LocalDateTime desdeFecha) throws SQLException {
+	public void consultarCitasDesde(Connection conn, LocalDateTime desdeFecha) throws SQLException {
         String sql = "SELECT * FROM citas WHERE fecha >= ? ORDER BY fecha";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setTimestamp(1, Timestamp.valueOf(desdeFecha));
