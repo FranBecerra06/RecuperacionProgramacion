@@ -8,7 +8,7 @@ public class ComparadorPorNotayNombre implements Comparator<Alumno> {
 
 		int comparacionNota = Double.compare(a1.getNota(), a2.getNota());
 
-		if (comparacionNota == 0) {
+		if (comparacionNota == 0) { //== 0 para que verifique si las dos notas son iguales
 
 			return a1.getNombre().compareTo(a2.getNombre());
 
