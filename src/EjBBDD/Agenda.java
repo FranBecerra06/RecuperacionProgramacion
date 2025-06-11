@@ -19,8 +19,9 @@ public static void main(String[] args) {
             // Insertar una nueva cita
             cita.insertarCita(conn, "María González", "Dentista", LocalDateTime.of(2025, 6, 14, 16, 0));
 
+            ConsultarCitas consultarcita = new ConsultarCitas();
             // Consultar citas posteriores a cierta fecha
-            ConsultarCitas.consultarCitasDesde(conn, LocalDateTime.of(2025, 6, 12, 0, 0));
+            consultarcita.consultarCitasDesde(conn, LocalDateTime.of(2025, 6, 12, 0, 0));
 
         } catch (SQLException e) {
             e.printStackTrace();
