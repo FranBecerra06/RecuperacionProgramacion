@@ -1,21 +1,25 @@
 package EjDiapositiva36;
 
+import java.io.File;
 import java.io.IOException;
 
 public class Main {
 
-	public static void main(String[] args) {
-		// Nombre del archivo que quiero analizar
-		String nombreArchivo = "texto.txt";
+    public static void main(String[] args) {
+        String nombreArchivo = "texto.txt";
 
-		// Llamada al método contarPalabras
-		try {
-			new java.io.PrintWriter(nombreArchivo).close();
-		} catch (IOException e) {
-			System.out.println("Error al crear el archivo: " + e.getMessage());
-		}
+        // Verificar si el archivo existe antes de vaciarlo accidentalmente
+        File archivo = new File(nombreArchivo);
+        if (!archivo.exists()) {
+            try {
+                if (archivo.createNewFile()) {
+                    System.out.println("Se ha creado el archivo " + nombreArchivo);
+                }
+            } catch (IOException e) {
+                System.out.println("Error al crear el archivo: " + e.getMessage());
+            }
+        }
 
-		ContadorPalabras.contarPalabras(nombreArchivo);
-	}
-
+        ContadorPalabras.contarPalabras(nombreArchivo);
+    }
 }
