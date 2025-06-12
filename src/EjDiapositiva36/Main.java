@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         String nombreArchivo = "texto.txt";
 
-        // Verificar si el archivo existe antes de vaciarlo accidentalmente
+        
         File archivo = new File(nombreArchivo);
         if (!archivo.exists()) {
             try {
